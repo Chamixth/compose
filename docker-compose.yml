@@ -1,0 +1,10 @@
+services:
+  web:
+    image: chamixth/real-estate-website-2:latest
+    build: .
+    ports:
+      - "80:80"
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: on-failure
